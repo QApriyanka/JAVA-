@@ -1,0 +1,99 @@
+
+****************************LOCAL ********************************************
+public class VariType {
+	// B1 just a class, local variables are declared within a block 
+	
+	public void ParentAge() {
+		int age = 0;          // variable age is local variable to the function ParentAge().if we try using it in
+		age = age+30;        //outside ParentAge() funtion it will be an error, so 
+		System.out.println("Parent's age is:"+ age);	
+		
+	}
+	
+	// we made an object of class so that we can use or call function from other method
+	public static void main(String args[]) {
+		
+		VariType obj= new VariType();
+		obj.ParentAge();
+		
+		
+		
+		
+	}
+
+}
+
+
+**********************INSTANCE ***************
+
+import java.io.*;
+
+class Grades {
+	// these variables are under class (instance variables)
+	// not inside any function 
+	int artGrade;
+	int mathsGrade;
+	int geoGrade;
+}
+
+	
+public class vartype2 {
+	
+	public static void main(String args[])
+	{
+		//first object
+		Grades obj1= new Grades();
+		obj1.artGrade= 80;
+		obj1.mathsGrade= 78;
+		obj1.geoGrade=68;
+		
+		
+		//second object 
+		Grades obj2= new Grades();
+		obj2.artGrade= 78;
+		obj2.geoGrade=78;
+		obj2.mathsGrade=89;
+		
+		// displaying grades for first object 
+		
+		System.out.println("Marks for object1:");
+		System.out.println(obj1.artGrade);
+		System.out.println(obj1.mathsGrade);
+		System.out.println(obj1.geoGrade);
+		
+		// displaying grades for Second object 
+		System.out.println("Marks for object2:");
+		System.out.println(obj2.artGrade);
+		System.out.println(obj2.mathsGrade);
+		System.out.println(obj2.geoGrade);
+//each object will have its own copies of instance variables
+		
+	}
+	
+}
+
+****************************STATIC 
+
+
+class School{
+	//static variables
+	public static double percentage;
+	public static String name= "Chika";	
+}
+
+
+
+public class varType3 {
+	
+	public static void main(String args[]) {
+		//accessing static variables without object
+		
+		School.percentage= 80;
+		
+		System.out.println(School.percentage);		
+		
+	}
+	
+	
+
+}
