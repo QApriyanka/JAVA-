@@ -1,1 +1,19 @@
+METHOD OVERLOADING
+
+package oopss;
+public class AddOvRid {
+	
+	public void addition(int a , int b) {
+		int c= a+b;
+		System.out.println("Addition of a and b ="+c);
+			
+	}
+	
+	public void addition(int a , int b, int c) {
+
+		int d= a+b+c;
+		System.out.println(d);
+	}
+
+}
 
